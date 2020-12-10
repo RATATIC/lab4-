@@ -53,13 +53,14 @@ public class GraphicsDisplay extends JPanel {
 
     protected Point2D.Double shiftPoint(Point2D.Double src, double deltaX, double deltaY) {
         Point2D.Double dest = new Point2D.Double();
-        dest.setLocation(src.getX() + deltaX, src.getY() + deltaY);
+        dest.setLocation(src.getX() +deltaX, src.getY() + deltaY);
         return dest;
     }
+    
 
     protected void paintGraphics(Graphics2D canvas) {
         canvas.setStroke(graphicsStroke);
-        canvas.setColor(Color.BLUE);
+        canvas.setColor(Color.BLACK);
         GeneralPath graphics = new GeneralPath();
         for (int i = 0; i < graphicsData.length; i++) {
             Point2D.Double point = xyToPoint(graphicsData[i][0], graphicsData[i][1]);

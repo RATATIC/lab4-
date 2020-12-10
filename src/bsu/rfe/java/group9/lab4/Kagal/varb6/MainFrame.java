@@ -45,7 +45,8 @@ public class MainFrame extends JFrame {
             }
         };
         fileMenu.add(openGraphicsAction);
-        JMenu graphicsMenu = new JMenu("График");
+        
+        JMenu graphicsMenu = new JMenu("График ");
         menuBar.add(graphicsMenu);
         
         Action showAxisAction = new AbstractAction("Показывать оси координат") {
@@ -56,10 +57,12 @@ public class MainFrame extends JFrame {
             }
         };
         showAxisMenuItem = new JCheckBoxMenuItem(showAxisAction);
+        
         graphicsMenu.add(showAxisMenuItem);
+        
         showAxisMenuItem.setSelected(true);
         
-        Action showGridAction = new AbstractAction("Показывать деления") {
+        Action showGridAction = new AbstractAction("Показать деления") {
             public void actionPerformed(ActionEvent e) {
             	if (showAxisMenuItem.isSelected())
                 display.setShowGrid(showGridMenuItem.isSelected());
